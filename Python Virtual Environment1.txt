@@ -1,0 +1,43 @@
+->pip install virtualenv
+
+//Make a project folder
+-> virtualenv project1_env
+
+//Activate virtual environment
+//go to project folder
+-> Scripts\activate
+
+//Deactivate virtual environment
+-> deactivate
+
+//To check all installed packages
+-> pip list
+
+//Export all packages and their version #s of this venv project to use in another project
+-> pip freeze --local > requirements.txt
+
+//To delete virtualenv project
+-> rd /s /q project1_env
+
+
+//To use another version of python
+-> virtualenv --python=/usr/bin/python2.6 <path/to/new/virtualenv/>
+-> python -m venv <myenvname> //venv would only work for python3. for other versions use virtualenv
+// Activate after creating this
+
+//To install all packages from requirements.txt ... goto project's parent folder where requirements.txt is
+-> pip install -r requirements.txt
+//This will be only done when you've already activated the newly created virtual environment and activated it.
+
+
+// DO NOT CREATE YOUR PROJECT FILES IN VIRTUAL ENVIRONMENT. THIS IS ONLY FOR INSTALLING DEPENDENCIES
+
+
+
+
+
+
+
+
+
+

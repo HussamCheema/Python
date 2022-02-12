@@ -1,0 +1,42 @@
+-> pip list //to check installed packages
+
+//To create a virtual environment
+-> python -m venv <project_name>
+
+//To activate the environment
+-> <project_name>\Scripts\activate.bat
+-> where python //to check where it has created the environment
+
+-> pip install <package> //to install new packages to virtual environment
+
+// To put all packages into requirements.txt
+-> pip freeze // put all pkgs to requirements.txt file
+
+//Deactivate
+-> deactivate
+
+//To remove virtual environment project
+rmdir <project_name> /s
+
+-----------------------------------------------------
+
+-> mkdir my_project
+-> python -m venv my_project\venv
+-> my_project\venv\Scripts\activate.bat
+-> pip install -r requirements.txt
+
+// Never create project files in "venv" folder
+// Don't commit "venv" to source control but you can commit "requirements.txt" file
+
+-> deactivate
+
+//In that project folder
+->rmdir venv /s
+
+//Giving virtualenv project, access to global packages
+-> python -m venv venv --system-site-packages
+-> venv\Scripts\activate.bat
+
+//additional pkgs that we'll install still won't affect system's packages
+
+->  pip list --local //to only list pkgs that are installed in venv.
